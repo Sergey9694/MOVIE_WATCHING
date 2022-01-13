@@ -55,4 +55,14 @@ function detectPersonaLevel () {
 
 detectPersonaLevel ();
 
-console.log(personalMovieDB); 
+
+
+/* Вообще, hidden-это имя аргумента. Когда-то Иван говорил, что если ввести в "поле" для аргумента/ов (if (вот тут) {...}) что-либо (просто имя аргумента или же просто число), то это всегда true. !hidden-это обратное, то есть false. В personalDB.privat "лежит" какое-то значение (false) и мы "сравниваем" это значение (personalDB.privat) с !hidden (false). И если, personalDB.privat, также как и !hidden-false, то мы выводим главный объект в консоль, если же personalDB.privat-true, то мы ничего не делаем. */
+
+function showMyDB (hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB (personalMovieDB.privat);
